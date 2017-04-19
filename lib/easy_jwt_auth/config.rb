@@ -12,6 +12,8 @@ module EasyJwtAuth
       end
 
       def set_finder_method(finder_method)
+        raise InvalidFinderMethod unless finder_method.respond_to?(:call)
+
         @finder_method = finder_method
       end
 
