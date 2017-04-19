@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Pantelis Vratsalis"]
   spec.email         = ["pvratsalis@gmail.com"]
 
-  spec.summary       = %q{easy_jwt_auth is a small gems that can be used in APIs and allows authentication with the use of jwt tokens.}
-  spec.description   = %q{With easy_jwt_auth, a client can send a jwt token as the authorization header and the gem will check this header and load the appropriate user if the token is valid and has not expired}
+  spec.summary       = %q{Welcome to EasyJwtAuth! EasyJwtAuth is a ruby gem that allows easy use of JWT tokens in any ruby project or rails application, typically for authenticating and authorizing requests.}
+  spec.description   = %q{A typical usecase of JWT tokens is when building an API. JWT tokens can be sent as authorization tokens in headers. The advantage of using JWT tokens is that they are signed with a secret, so the information inside them cannot be tampered. This makes them ideal for embeding both authentication and authorization information in one step (e.g. by "decoding" the token, one can get information about the user and the roles a user has in case of a role-based authorization). Also, the fact that expiration timestamps can be embedded in the data of the token and be handled automatically, can be used to easily build short-lived tokens, making an API more secure.}
   spec.homepage      = "https://github.com/m1lt0n/easy_jwt_auth"
   spec.license       = "MIT"
 
