@@ -7,6 +7,8 @@ module EasyJwtAuth
     end
 
     def user_from_header(auth_header)
+      raise InvalidAuthHeader unless valid_header?(auth_header)
+
       decoded_token = JWT.decode(
         token_from_header(auth_header), secret, true, { algorithm: algo }
       )
@@ -21,6 +23,10 @@ module EasyJwtAuth
 
     def token_from_header(auth_header)
       auth_header.split.last
+    end
+
+    def valid_header?(auth_header)
+      /Bearer (.+)/.match(auth_header)
     end
   end
 end
